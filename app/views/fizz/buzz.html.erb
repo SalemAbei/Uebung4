@@ -1,0 +1,25 @@
+<h1>Salem Web FizzBuzz spiel </h1>
+<p>Ausgabe aller Zahlen von 1 bis 100 und Ausgabe der Teilbarkeit durch 3 und 5 </p>
+
+
+<table border = "1">
+	<tr>
+		<th>Zahl</th>
+		<th>Teilbar durch <%= @fizz_number%></th>
+		<th>Teilbar duch <%= @buzz_number%></th>
+		<th>FizzBuzz </th>
+	</tr>
+
+	<% 1.upto(@max_number) do |i| %>
+	<tr>
+		<td> <%= i %> </td>
+		<td> <%= i%3 == 0 ? "x" : "" %> </td>
+		<td> <%= i%5 == 0 ? "x" : "" %> </td>
+		<td> <%= render_stars(i) %> </td>
+	</tr>
+
+	
+	<%i = i + 1%>
+	<% end %>
+</table>
+
